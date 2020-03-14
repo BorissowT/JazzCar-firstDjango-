@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block title %}<title>JAZZCARS | Main</title>{% endblock %}
+{% block collapse %}
+<div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a class="nav-link btn-dark" href="#">Main</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#" data-test="navlink">Schnell </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-test="navlink">Groß</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-test="navlink">Cool</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-test="navlink">Umweltfreundlich</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-test="navlink">Billig</a>
+              </li>
+            </ul>
+          </div>
+{% endblock %}
+{% block container %}
+
+    <div class="jumbotron text-center mt-4 image">
+         <div class="black_font">
+              <h1 class="display-4">Vierrädig Allerlei</h1>
+              <p class="lead">Für allen, die Geld haben</p>
+         </div>
+      <p class="mt-5 w-50 mx-auto ">Beste Autos unseres Regions. Finden Sie sich eine passende Kutsche</p>
+    </div>
+
+
+
+    <!-- CARDS -->
+
+    <div class="row mt-5" data-test="cards">
+    {% for car in cars %}
+        <div class="col-4" data-test="card">
+            <div class="card mb-3" >
+            <img src={{car.picture}} class="card-img-top img-fluid" width="300" height="330" data-test="picture">
+            <div class="card-body">
+              <h5 class="card-title">{{car.title}}</h5>
+             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="" class="btn btn-sm btn-dark" data-test="tourlink">Подробнее</a>
+            </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+
+</body>
+</html>
+{% endblock %}

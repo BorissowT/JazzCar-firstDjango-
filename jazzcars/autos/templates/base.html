@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}{% endblock %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="shortcut icon" href={% static 'autos/img/favicon.ico' %} type="image/ico">
+    
+    <link rel="stylesheet" href={% static 'autos/style.css' %}>
+</head>
+ 
+<body class="background">
+
+<div class="container mt-3 black">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+          <a class="navbar-brand title" data-test="logo" href="#">JAZZCARS</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            
+    {% block collapse %} {% endblock %}
+            
+        </nav>
+    <!-- HERO -->
+{% block container %} {% endblock %}
