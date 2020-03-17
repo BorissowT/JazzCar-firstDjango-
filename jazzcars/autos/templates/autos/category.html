@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block container %}
+<h1 class="white">{{pagename}}e Autos für Sie</h1>
+<hr noshade size="10">
+
+<div class="row mt-5" data-test="cards">
+    {% for car in cars %}
+        {% if  pagename in car.category  %}
+        <div class="col-4" data-test="card">
+            <div class="card mb-3" >
+            <img src={{car.picture}} class="card-img-top" width="300" height="230" data-test="picture">
+            <div class="card-body">
+              <h5 class="card-title">{{car.title}}</h5>
+             <p class="card-text">{{car.info|truncatechars:135}}</p>
+                <a href="/category/{{car.id}}" class="btn btn-sm btn-dark" data-test="tourlink">Mehr</a>
+            </div>
+            </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+
+{% endblock %}
+

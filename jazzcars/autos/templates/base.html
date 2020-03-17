@@ -3,10 +3,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    {% block title %}{% endblock %}
+    {% if pagename %}
+    <title>JAZZCARS | {{pagename}}</title>
+    {% else %}
+    <title>JAZZCARS | Main</title>
+    {% endif %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="shortcut icon" href={% static 'autos/img/favicon.ico' %} type="image/ico">
-    
+    <link rel="shortcut icon" href={% static 'autos/img/favicon.ico' %} type="image/ico">  
     <link rel="stylesheet" href={% static 'autos/style.css' %}>
 </head>
  
@@ -15,13 +18,63 @@
 <div class="container mt-3 black">
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-          <a class="navbar-brand title" data-test="logo" href="#">JAZZCARS</a>
+          <a class="navbar-brand title" data-test="logo" href="/">JAZZCARS</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
             
-    {% block collapse %} {% endblock %}
+    <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="nav nav-pills">
+            {% if pagename == "Schnell" %} 
+              <li class="nav-item">
+                <a class="nav-link btn-dark" href="/Schnell" data-test="navlink">Schnell </a>
+              </li>
+            {% else %}
+              <li class="nav-item">
+                 <a class="nav-link" href="/Schnell" data-test="navlink">Schnell </a>
+              </li>
+            {% endif %}
+            {% if pagename == "Gross" %}
+              <li class="nav-item">
+                <a class="nav-link btn-dark" href="/Gross" data-test="navlink">Groß</a>
+              </li>
+            {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="/Gross" data-test="navlink">Groß</a>
+              </li>
+            {% endif %}
+            {% if pagename == "Cool" %} 
+              <li class="nav-item">
+                <a class="nav-link btn-dark" href="/Cool" data-test="navlink">Cool</a>
+              </li>
+            {% else %} 
+               <li class="nav-item">
+                <a class="nav-link " href="/Cool" data-test="navlink">Cool</a>
+              </li>
+            {% endif %}     
+            {% if pagename == "Umweltfreundlich" %} 
+              <li class="nav-item">
+                <a class="nav-link btn-dark" href="/Umweltfreundlich" data-test="navlink">Umweltfreundlich</a>
+              </li>
+            {% else %} 
+               <li class="nav-item">
+                <a class="nav-link " href="/Umweltfreundlich" data-test="navlink">Umweltfreundlich</a>
+              </li>
+            {% endif %}
+            {% if pagename == "Billig" %} 
+              <li class="nav-item">
+                <a class="nav-link btn-dark" href="/Billig" data-test="navlink">Billig</a>
+              </li>
+            {% else %}  
+              <li class="nav-item">
+                <a class="nav-link" href="/Billig" data-test="navlink">Billig</a>
+              </li> 
+            {% endif %}
+            </ul>
+          </div>
             
         </nav>
     <!-- HERO -->
 {% block container %} {% endblock %}
+    </body>
+</html>

@@ -15,6 +15,23 @@
     color: black;
 }
 
+.white{
+    margin-top: 20px;
+    color: white;
+    font-style: italic;
+}
+
+
+
 .title{
-    font-family: Trattatello;
+    font-style: italic; 
+    font-weight: 500;
+}
+
+.cursive {
+    font-style: italic;
+}
+
+table {
+  width: 10%;
 }
