@@ -2,12 +2,12 @@
 
 {% block container %}
 
-    <div class="jumbotron text-center mt-4 image">
+    <div class="jumbotron text-center image ">
          <div class="black_font">
               <h1 class="display-4">Vierrädig Allerlei</h1>
               <p class="lead">Für allen, die Geld haben</p>
          </div>
-      <p class="mt-5 w-50 mx-auto ">Beste Autos unseres Regions. Finden Sie sich eine passende Kutsche</p>
+      <p class="mt-5 w-50 mx-auto">Beste Autos unseres Regions. Finden Sie sich eine passende Kutsche</p>
     </div>
 
 
@@ -16,17 +16,18 @@
 
     <div class="row mt-5" data-test="cards">
         {% for car in cars %}
-        <div class="col-4" data-test="card">
+         <div class="col-4" data-test="card">
             <div class="card mb-3" >
-            <img src={{car.picture}} class="card-img-top img-fluid" width="300" height="330" data-test="picture">
+            <img src={{car.picture}} class="card-img-top" width="300" height="230" data-test="picture">
             <div class="card-body">
-              <h5 class="card-title">{{car.title}}</h5>
-             <p class="card-text">{{car.info|truncatechars:135}}</p>
-                <a href="/category/{{car.id}}" class="btn btn-sm btn-dark" data-test="tourlink">Mehr</a>
+                 <h5 class="card-title">{{car.title}}</h5>
+                   <p>Jahrgang: {{car.year}}</p> 
+                <p class="card-text">{{car.info}}</p>
+                <a href="/category/{{car.id}}" class="btn btn-sm btn-dark" data-test="tourlink">Mehr...</a>
             </div>
             </div>
         </div> 
         {% endfor %}
     </div>
-
+<hr noshade size="10"> 
 {% endblock %}

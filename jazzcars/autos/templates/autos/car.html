@@ -2,22 +2,21 @@
 {% block container %}
 <h1 class="white title">{{pagename}}</h1>
 <hr noshade size="10">
-
- <img data-test="picture" src="{{car.picture}}" class="w-75 center" alt="">
-    <div class="row col-6">
-        <table class="table table-striped table-dark mt-4">
-          <tbody>
-            <tr>
-              <td>Jahrgang:</td>
-              <td>{{car.year}}</td>
-            </tr>
-            <tr>
-              <td>Motor:</td>
-              <td>{{car.Motor}}</td>
-            </tr>
-          </tbody>
-        </table>    
-    </div>
-<p class="white">{{car.info}}</p>
-<hr noshade size="10">
+<div class="px-5 ">
+     <img data-test="picture" src="{{car.picture}}" class="w-75 center" alt="">
+            <table class="table table-striped table-dark mt-4">
+              <tbody>
+                <tr>
+                  <td>Jahrgang:</td>
+                  <td>{{car.year}}</td>
+                </tr>
+                <tr>
+                  <td>Motor:</td>
+                  <td>{{car.Motor}}</td>
+                </tr>
+              </tbody>
+            </table>    
+        </div>
+    <p class="white-info">{{car.info}}</p> 
+<hr noshade size="10"> 
 {% endblock %}

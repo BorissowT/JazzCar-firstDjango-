@@ -24,7 +24,7 @@ cars = [
         'title': 'Mazda CX-5',
         'year': 2011,
         'category': {"Gross", "Billig"},
-        'Motor': '1,5 Liter ',
+        'Motor': 'Ottomotoren: 2,0–2,5 Liter (118–141 kW) Dieselmotoren: 2,2 Liter (110–129 kW)',
         'picture': 'https://s.auto.drom.ru/i24208/c/photos/fullsize/mazda/cx-5/mazda_cx-5_708027.jpg',
         'info':"""  Der MX-5 ist vom Konzept her eine Evolution der kleinen britischen und italienischen Sportwagen der 1960er wie z. B. der Triumph Spitfire, MG MGB, Fiat 124 Sport Spider, Alfa Romeo Spider und besonders der Lotus Elan. Vor der Vorstellung des MX-5 im Jahre 1989 war die Bauform des klassischen Roadsters aufgrund ständig verschärfter Sicherheitsbestimmungen und erheblicher Probleme mit der Zuverlässigkeit so gut wie ausgestorben. Einige Hersteller produzierten Fahrzeuge mit herausnehmbaren Dachteilen (Targa). Der einzige noch in Großserie gebaute Vertreter der Gattung der klassischen Roadster war der Alfa Romeo Spider, der jedoch aufgrund seiner langen Bauzeit technisch veraltet war.
 
