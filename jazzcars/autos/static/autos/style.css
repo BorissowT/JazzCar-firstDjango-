@@ -40,11 +40,7 @@
   width: 50%;
 }
 
-.borderr{
-    border: 2px solid #202020;
-    width: 1210px;
-    height: 60px;
-}
+
 
 .card-text{
     height: 72px;
@@ -53,9 +49,13 @@
 
 .fixed {
     position:fixed;
-    top: 10px; 
-    right: 340px;
-    width: 1210px;
+    top: 10px;
+    left: 18%;
+    width: 65%;
     z-index: 2;
+    border: 2px solid #202020;
+    height: 60px;
+    border-radius: 5px 5px 5px 5px;
     
 }
+

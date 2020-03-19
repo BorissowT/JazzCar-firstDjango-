@@ -14,14 +14,15 @@
 </head>
  
 <body class="background">
-
 <div class="container mt-3 black">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed borderr">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed borderr">
           <a class="navbar-brand title" data-test="logo" href="/">JAZZCARS</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#MAIN" aria-controls="navbarNav" aria-   expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>      
-        <div class="collapse navbar-collapse" id="navbarNav">
+        </button> 
+       
+       <div class="collapse navbar-collapse radius" id="MAIN">
             <ul class="nav nav-pills">
             {% if pagename == "Schnell" %} 
               <li class="nav-item">
@@ -69,8 +70,8 @@
               </li> 
             {% endif %}
             </ul>
-          </div>
-            </nav>
+        </div>
+    </nav>
        
         
     <!-- HERO -->
