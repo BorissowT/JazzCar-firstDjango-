@@ -138,14 +138,14 @@ cars = [
     ]
 
 class MainView(View):
-    def get(self, request, cars=cars, *args, **kwargs):
+    def get(self, request,):
         return render(
             request, 'autos/main.html', context={
                 'cars': cars
             }
         )
 class CategoryView(View):
-    def get(self, request, cars=cars, category="Schnell", *args, **kwargs):
+    def get(self, request, category):
         return render(
             request, 'autos/category.html', context={
                 'cars': cars, 'pagename': category
@@ -153,7 +153,7 @@ class CategoryView(View):
         )
 
 class CarView(View):
-    def get(self, request, cars=cars, id=1, *args, **kwargs):
+    def get(self, request,  id, *args, **kwargs):
         for carr in cars:
             if carr["id"] == id:
                 car=carr
