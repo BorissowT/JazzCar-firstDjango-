@@ -1,1 +1,1 @@
-web: gunicorn stepik_toolbox.wsgi --log-file -
+web: gunicorn jazzcars\jazzcars.wsgi --log-file -
