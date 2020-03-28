@@ -25,7 +25,7 @@ SECRET_KEY = '81=*wc^haxt71owx7u=&+t0#@mkqtf%s&wz+*!968n$cukd=z('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['jazzcar.herokuapp.com']
 
 
 # Application definition
@@ -119,3 +119,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = 'static'
