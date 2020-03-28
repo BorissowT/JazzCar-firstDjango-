@@ -10,7 +10,7 @@ class MainView(View):
         random.shuffle(cars)
         return render(
             request, 'autos/main.html', context={
-                'cars': cars
+                'cars': cars[:6]
             }
         )
 class CategoryView(View):
