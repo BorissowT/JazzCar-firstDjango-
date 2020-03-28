@@ -25,7 +25,7 @@ SECRET_KEY = '81=*wc^haxt71owx7u=&+t0#@mkqtf%s&wz+*!968n$cukd=z('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['jazzcars.herokuapp.com']
+ALLOWED_HOSTS = ['jazzcars.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -120,9 +121,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = 'static'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "autos/static"),
+)
 
-MIDDLEWARE_CLASSES = (
-    'whitenoise.middleware.WhiteNoiseMiddleware')
+STATIC_ROOT = os.path.join(BASE_DIR, "live-static-files", "static-root")
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+MEDIA_URL = "/media/"
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "live-static-files", "media-root")
