@@ -1,1 +1,1 @@
-web: gunicorn jazzcars.wsgi --log-file -
+web: gunicorn jazzcars.jazzcars.wsgi --log-file -
