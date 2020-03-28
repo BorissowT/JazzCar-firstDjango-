@@ -121,3 +121,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = 'static'
+
+MIDDLEWARE_CLASSES = (
+    'whitenoise.middleware.WhiteNoiseMiddleware')
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
