@@ -1,6 +1,7 @@
 .background {
     background-color: #202020;
-    margin: auto;
+    margin-right: 10%;
+    margin-left: 10%;
 }
 
 .jumbotron {
@@ -50,8 +51,8 @@
 .fixed {
     position:fixed;
     top: 10px;
-    left: 18%;
-    width: 65%;
+    left: 10%;
+    width: 80%;
     z-index: 2;
     border: 2px solid #202020;
     height: 60px;
