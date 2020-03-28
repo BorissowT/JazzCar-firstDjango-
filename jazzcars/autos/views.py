@@ -30,3 +30,8 @@ class CarView(View):
                 'car': car, 'pagename': car['title']
             }
         )
+
+def view_404 (request, exception):
+    return render(
+        request, '404.html'
+    )

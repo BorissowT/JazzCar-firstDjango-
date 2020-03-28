@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '81=*wc^haxt71owx7u=&+t0#@mkqtf%s&wz+*!968n$cukd=z('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['jazzcars.herokuapp.com', '127.0.0.1']
 
